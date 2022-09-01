@@ -92,15 +92,6 @@ public class CategoryDocumentController {
         return response;
     }
 
-//    @PatchMapping(value = UPDATE_CATEGORY)
-//    public ResponseEntity<CategoryDocumentEntity> partialUpdate(@RequestBody Map<String, Object> updates,
-//                                           @PathVariable("categoryId") Integer categoryId){
-//        CategoryDocumentEntity entity = categoryDocumentRepository.findById(categoryId)
-//                .orElseThrow(() -> new NotFoundException("Нет такого ID"));
-//        System.out.print(updates);
-//        categoryDocumentRepository.save(entity);
-//        return entity.ok("Updated");
-//    }
 
     private CategoryDocumentEntity convertToEntity(CategoryDocumentDto categoryDocumentDto){
         return modelMapper.map(categoryDocumentDto, CategoryDocumentEntity.class);
